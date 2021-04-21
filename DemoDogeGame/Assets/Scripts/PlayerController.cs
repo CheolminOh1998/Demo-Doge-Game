@@ -36,5 +36,10 @@ public class PlayerController : MonoBehaviour
     {
         // Player Object is deactivated
         gameObject.SetActive(false);
+
+        // Bring GameManger type object
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        // start the EndGame() inside the gameManger object
+        gameManager.EndGame();
     }
 }
